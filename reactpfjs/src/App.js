@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
+import ItemListContainer from './components/ItemListContainer'
+import  logo2 from './components/carrito-de-supermercado.png'
 function App() {
+ 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Primer proyecto levantando <strong>REACT!</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://matiluajn.github.io/Pollo-fried-by-nahue/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Presiona aqui para ver mi proyecto fonal de JS
-        </a>
+        
+      <ItemListContainer img={logo}/>
+      <ItemListContainer img={logo2}/>
+       
       </header>
     </div>
   );
