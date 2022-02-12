@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import ItemListContainer from './components/ItemListContainer'
+import ItemCount from './components/ItemCount'
 import  logo2 from './components/carrito-de-supermercado.png'
 function App() {
  
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-      <ItemListContainer img={logo}/>
+      <ItemCount img={logo}/>
       
        
       </header>

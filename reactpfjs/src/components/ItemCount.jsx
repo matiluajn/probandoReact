@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ItemListContainer.css'
 
-const ItemListContainer =({img})=>{
+const ItemCount =({img})=>{
 const [count, setCount] = useState(0)
 const sumar=()=>{
     setCount(count + 1)
@@ -32,4 +32,4 @@ const cero=()=>{
     )
 }
 
-export default ItemListContainer;
+export default ItemCount;
