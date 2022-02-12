@@ -1,18 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ItemListContainer.css'
 
 const ItemListContainer =({img})=>{
+const [count, setCount] = useState(0)
+const sumar=()=>{
+    setCount(count + 1)
+    };
+const restar=()=>{
+    setCount(count - 1)
+    };
+const cero=()=>{
+    setCount(()=>{
+        return 0
+    })
+    };    
     return(
-        <div className="container">        
-        <div class="card " style={{width: "18rem"}}>
-            <img src={img} class="card-img-top" alt="..."/>
-            <div class="card-body d-flex flex-column ">
-                <h5 class="card-title text-dark">Card title</h5>
-                <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        </div>
+
+            <div className="card-group">    
+                <div class="card " style={{width: "18rem"}}>
+                    <img src={img} class="card-img-top" alt="..."/>
+                    <div class="card-body  ">
+                        <h5 class="card-title text-dark">Press to sum or subtract</h5>
+                        <p class="card-text text-dark">{count}</p>
+                        <button onClick={restar} type="button" class="btn btn-primary">-1</button>
+                        <button onClick={cero} type="button" class="btn btn-primary">0</button>
+                        <button onClick={sumar} type="button" class="btn btn-primary">+1</button>
+                    </div>
+                </div>
+            </div>   
+        
     )
 }
 

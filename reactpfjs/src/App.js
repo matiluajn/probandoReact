@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         
       <ItemListContainer img={logo}/>
-      <ItemListContainer img={logo2}/>
+      
        
       </header>
     </div>
