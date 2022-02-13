@@ -1,8 +1,8 @@
 import React from "react";
 import './NavBar.css';
-import logo from "./carrito-de-supermercado.png"
+import logo from "../carrito-de-supermercado.png"
 
-function navBar(){
+function NavBar(){
     return(
         <header className="header ">
          <nav class="navbar navbar-expand-lg  ">
@@ -35,4 +35,4 @@ function navBar(){
         </header>
     )
 }
-export default navBar;
+export default NavBar;
