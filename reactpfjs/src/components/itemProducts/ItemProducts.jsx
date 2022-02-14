@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import imgBelgrano from '../buzo_belgrano.jpg'
   
 
 export default function ItemProducts() { 
@@ -6,19 +7,14 @@ export default function ItemProducts() {
 
     const products = [
         {
-            id:1,
+          id:1,
           cliente: 'daniel',
-          prenda: 'buzo',
+          prenda: 'buzo de Belgrano',
           talle: 'm',
-          costo: 135,
+          costo: 1750,
+          img: imgBelgrano
         },
-        {
-            id:2,
-          cliente: 'vanesa',
-          prenda: 'vestido',
-          talle: '2',
-          costo: 600,
-        },
+      
       ];
       const [client, setClient] = useState([]);
       const promise = new Promise((resolve, reject) => {
@@ -49,7 +45,14 @@ export default function ItemProducts() {
               client.map((element)=>{
                 return(
                    <div key={element.id}>
-                       {element.prenda}
+                     <div class="card" style={{width: '18rem'}}>
+                        <img src={element.img}class="card-img-top" alt="..."/>
+                       <div class="card-body">
+                        <p class="card-text bg-dark">{element.prenda}</p>
+                        <p class="card-text bg-dark">talle: {element.talle}</p>
+                        <p class="card-text bg-dark"> precio: ${element.costo}</p>
+                       </div>
+                     </div>
                    </div>
                 )
             })

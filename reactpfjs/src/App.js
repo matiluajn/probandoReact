@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ItemCount from './components/itemCount/ItemCount'
 import ItemProducts from './components/itemProducts/ItemProducts';
 import React,{useState} from 'react';
 function App() {
+  
   const [count, setCount] = useState(0)
 
   const stock = 10;
@@ -31,12 +32,32 @@ function App() {
           setCount(count - 1)
       };
   }
+    const [mostrarCard,setMostrarCard] = useState()
+    const mostrar1=()=>{
+      return setMostrarCard(<ItemProducts/>)
+    }
+
   return (
     <div className="App">
       <header className="App-header">
-        
-      <ItemCount img={logo} onAdd={onAdd} stock={stock} initial={initial} restar={restar} count={count}/>
-      <ItemProducts/>
+       <div className="container">
+         <div className="row">
+           <div className="col-md-4">
+           <ItemCount  mostrar={mostrar1}  onAdd={onAdd} stock={stock} initial={initial} restar={restar} count={count}/>
+           
+           </div>
+           <div className=" itemProd col-md-4">
+           
+           {
+             mostrarCard
+           }
+           </div>
+          
+          
+         </div>
+       
+      </div> 
+     
       
        
       </header>
