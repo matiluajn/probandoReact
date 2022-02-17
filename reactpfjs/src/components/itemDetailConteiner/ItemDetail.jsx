@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import imgBelgrano from '../buzo_belgrano.jpg'
   
 
-export default function ItemProducts() { 
+export default function ItemDetail() { 
          
 
     const products = [

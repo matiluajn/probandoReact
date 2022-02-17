@@ -1,8 +1,9 @@
 
 import './App.css';
 import ItemCount from './components/itemCount/ItemCount'
-import ItemProducts from './components/itemProducts/ItemProducts';
+import ItemDetail from './components/itemDetailConteiner/ItemDetail';
 import React,{useState} from 'react';
+import Api from './components/api/Api'
 function App() {
   
   const [count, setCount] = useState(0)
@@ -34,7 +35,7 @@ function App() {
   }
     const [mostrarCard,setMostrarCard] = useState()
     const mostrar1=()=>{
-      return setMostrarCard(<ItemProducts/>)
+      return setMostrarCard(<ItemDetail />)
     }
 
   return (
@@ -52,6 +53,11 @@ function App() {
              mostrarCard
            }
            </div>
+           <div >
+            <Api/>
+           
+           </div>
+
           
           
          </div>
